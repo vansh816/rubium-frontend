@@ -1,0 +1,589 @@
+/* =========================================
+   RUBIUM AI — CONTACT / BOOK A CALL
+========================================= */
+
+.contact-section {
+  position: relative;
+
+  padding: 120px 6%;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(190, 24, 93, 0.10),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(219, 39, 119, 0.08),
+      transparent 30%
+    ),
+    #fff;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.contact-header {
+  max-width: 760px;
+
+  margin: 0 auto 70px;
+
+  text-align: center;
+}
+
+
+.contact-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  color: var(--rubium-burgundy);
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 0.16em;
+}
+
+
+.contact-header h2 {
+  margin: 0 0 22px;
+
+  color: var(--rubium-dark);
+
+  font-size: clamp(48px, 6vw, 78px);
+
+  font-weight: 800;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.04em;
+}
+
+
+.contact-header h2 span {
+  background: linear-gradient(
+    90deg,
+    var(--rubium-burgundy),
+    var(--rubium-pink)
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+
+.contact-header p {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  color: var(--text-secondary);
+
+  font-size: 17px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.contact-grid {
+  width: min(1280px, 100%);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 32px;
+
+  align-items: start;
+}
+
+
+/* =========================================
+   LEFT COLUMN
+========================================= */
+
+.contact-left {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+
+/* =========================================
+   INFO CARD
+========================================= */
+
+.contact-info-card,
+.timeline-card,
+.contact-form-card {
+  border: 1px solid rgba(91, 11, 43, 0.15);
+
+  border-radius: 24px;
+
+  background: rgba(255, 255, 255, 0.86);
+
+  box-shadow:
+    0 20px 60px rgba(91, 11, 43, 0.07);
+
+  backdrop-filter: blur(12px);
+}
+
+
+.contact-info-card {
+  padding: 38px;
+}
+
+
+.contact-brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  margin-bottom: 38px;
+}
+
+
+.contact-brand img {
+  width: 62px;
+  height: 62px;
+
+  object-fit: contain;
+}
+
+
+.contact-brand h3 {
+  margin: 0 0 5px;
+
+  color: var(--rubium-dark);
+
+  font-size: 21px;
+
+  letter-spacing: 0.05em;
+}
+
+
+.contact-brand p {
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-size: 14px;
+}
+
+
+.contact-details {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 27px;
+}
+
+
+.contact-detail {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 16px;
+}
+
+
+.contact-detail svg {
+  flex-shrink: 0;
+
+  margin-top: 3px;
+
+  color: var(--rubium-pink);
+}
+
+
+.contact-detail span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: var(--text-secondary);
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+}
+
+
+.contact-detail strong {
+  display: block;
+
+  color: var(--rubium-dark);
+
+  font-size: 16px;
+
+  font-weight: 650;
+}
+
+
+/* =========================================
+   TIMELINE
+========================================= */
+
+.timeline-card {
+  padding: 36px 38px;
+}
+
+
+.card-label {
+  display: block;
+
+  margin-bottom: 27px;
+
+  color: var(--text-secondary);
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.16em;
+}
+
+
+.timeline {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 19px;
+}
+
+
+.timeline-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+
+.timeline-item span {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    var(--rubium-burgundy),
+    var(--rubium-pink)
+  );
+
+  color: white;
+
+  font-size: 12px;
+
+  font-weight: 800;
+}
+
+
+.timeline-item p {
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-size: 15px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   FORM CARD
+========================================= */
+
+.contact-form-card {
+  padding: 42px;
+}
+
+
+.form-row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+}
+
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  margin-bottom: 24px;
+}
+
+
+.form-group label {
+  margin-bottom: 9px;
+
+  color: var(--text-secondary);
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+}
+
+
+.form-group label span {
+  color: var(--rubium-pink);
+}
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(91, 11, 43, 0.18);
+
+  border-radius: 13px;
+
+  outline: none;
+
+  background: #fff;
+
+  color: var(--rubium-dark);
+
+  font-family: inherit;
+
+  font-size: 15px;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.form-group input,
+.form-group select {
+  height: 62px;
+
+  padding: 0 18px;
+}
+
+
+.form-group textarea {
+  min-height: 150px;
+
+  padding: 17px 18px;
+
+  resize: vertical;
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #9b9aa3;
+}
+
+
+.form-group select {
+  cursor: pointer;
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--rubium-pink);
+
+  box-shadow:
+    0 0 0 4px rgba(219, 39, 119, 0.08);
+}
+
+
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+
+.contact-submit {
+  width: 100%;
+
+  min-height: 64px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  border: none;
+
+  border-radius: 13px;
+
+  cursor: pointer;
+
+  background: linear-gradient(
+    100deg,
+    var(--rubium-burgundy),
+    var(--rubium-pink)
+  );
+
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+
+  box-shadow:
+    0 14px 30px rgba(190, 24, 93, 0.2);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.contact-submit:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 18px 38px rgba(190, 24, 93, 0.3);
+}
+
+
+.contact-submit svg {
+  transition: transform 0.25s ease;
+}
+
+
+.contact-submit:hover svg {
+  transform: translate(3px, -3px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+  .contact-section {
+    padding: 90px 5%;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-left {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .contact-section {
+    padding: 75px 20px;
+  }
+
+
+  .contact-header {
+    margin-bottom: 45px;
+  }
+
+
+  .contact-header h2 {
+    font-size: 48px;
+  }
+
+
+  .contact-header p {
+    font-size: 15px;
+  }
+
+
+  .contact-left {
+    display: flex;
+  }
+
+
+  .contact-info-card,
+  .timeline-card,
+  .contact-form-card {
+    padding: 25px 20px;
+
+    border-radius: 18px;
+  }
+
+
+  .contact-brand img {
+    width: 52px;
+    height: 52px;
+  }
+
+
+  .form-row {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+  }
+
+
+  .form-group input,
+  .form-group select {
+    height: 58px;
+  }
+
+
+  .contact-submit {
+    min-height: 60px;
+
+    font-size: 11px;
+  }
+
+}

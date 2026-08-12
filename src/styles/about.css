@@ -1,0 +1,385 @@
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about-section {
+  position: relative;
+  padding: 100px 0;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.about-container {
+  width: min(1280px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+
+/* =========================
+   ABOUT INTRO
+========================= */
+
+.about-intro {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+
+  color: var(--rubium-burgundy);
+}
+
+
+.about-intro h2,
+.team-header h2 {
+  margin: 0;
+
+  font-size: clamp(38px, 5vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+
+  color: var(--rubium-dark);
+}
+
+
+.about-intro h2 span,
+.team-header h2 span {
+  color: var(--rubium-burgundy);
+}
+
+
+.about-content {
+  max-width: 900px;
+  margin-top: 42px;
+}
+
+
+.about-content p {
+  margin: 0 0 24px;
+
+  font-size: 17px;
+  line-height: 1.8;
+
+  color: var(--text-secondary);
+}
+
+
+.about-content .about-lead {
+  font-size: 21px;
+  line-height: 1.7;
+
+  color: var(--rubium-dark);
+}
+
+
+.about-principles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  margin: 32px 0;
+}
+
+
+.about-principles span {
+  padding: 12px 18px;
+
+  border: 1px solid var(--border);
+  border-radius: 999px;
+
+  background: #fafafa;
+
+  color: var(--rubium-dark);
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+.about-goal {
+  font-size: 22px !important;
+  font-weight: 700;
+
+  color: var(--rubium-burgundy) !important;
+}
+
+
+.about-tagline {
+  margin-top: 42px;
+  padding-top: 28px;
+
+  border-top: 1px solid var(--border);
+
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+
+  color: var(--rubium-dark);
+}
+
+
+/* =========================
+   TEAM
+========================= */
+
+.team-section {
+  margin-top: 130px;
+}
+
+
+.team-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 60px;
+
+  margin-bottom: 55px;
+}
+
+
+.team-header > div {
+  flex: 1;
+}
+
+
+.team-header > p {
+  max-width: 420px;
+
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 1.7;
+
+  color: var(--text-secondary);
+}
+
+
+/* =========================
+   TEAM GRID
+========================= */
+
+.team-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+
+.team-card {
+  position: relative;
+
+  min-height: 280px;
+
+  padding: 22px;
+
+  border: 1px solid var(--border);
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 8px 28px rgba(0, 0, 0, 0.04);
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.team-card:hover {
+  border-color: rgba(91, 11, 43, 0.2);
+
+  box-shadow:
+    0 18px 45px rgba(91, 11, 43, 0.08);
+}
+
+
+.team-number {
+  position: absolute;
+
+  top: 25px;
+  right: 28px;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  color: #aaa;
+}
+
+
+.team-avatar {
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 28px;
+
+  border-radius: 18px;
+
+  background: linear-gradient(
+    135deg,
+    var(--rubium-burgundy),
+    var(--rubium-ruby)
+  );
+
+  color: #ffffff;
+
+  font-size: 23px;
+  font-weight: 800;
+}
+
+
+.team-card h3 {
+  margin: 0 0 8px;
+
+  font-size: 22px;
+
+  color: var(--rubium-dark);
+}
+
+
+.team-role {
+  display: block;
+
+  margin-bottom: 20px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  color: var(--rubium-burgundy);
+}
+
+
+.team-card p {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.7;
+
+  color: var(--text-secondary);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .team-header {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 20px;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .about-section {
+    padding: 75px 0;
+  }
+
+  .about-container {
+    width: min(100% - 28px, 1280px);
+  }
+
+  .about-content {
+    margin-top: 30px;
+  }
+
+  .about-content p {
+    font-size: 15px;
+  }
+
+  .about-content .about-lead {
+    font-size: 18px;
+  }
+
+  .about-principles {
+    flex-direction: column;
+  }
+
+  .about-principles span {
+    width: fit-content;
+  }
+
+  .team-section {
+    margin-top: 90px;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-card {
+    min-height: auto;
+  }
+}
+
+/* =========================
+   TEAM LINKEDIN
+========================= */
+
+.team-linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 18px;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #111;
+
+  transition: all 0.25s ease;
+}
+
+.team-linkedin:hover {
+  transform: translateX(4px);
+}
+
+.linkedin-icon {
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 5px;
+
+  background: #111;
+  color: #fff;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  font-family: Arial, sans-serif;
+}
+
+.team-linkedin:hover .linkedin-icon {
+  transform: scale(1.08);
+}

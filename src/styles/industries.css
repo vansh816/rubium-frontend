@@ -1,0 +1,413 @@
+/* =========================================
+   RUBIUM AI — INDUSTRIES
+========================================= */
+
+.industries-page {
+  background: #ffffff;
+  color: var(--rubium-dark);
+  overflow: hidden;
+}
+
+/* HERO */
+
+.industries-hero {
+  position: relative;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 24px 90px;
+  background:
+    radial-gradient(
+      circle at 50% 25%,
+      rgba(203, 31, 91, 0.10),
+      transparent 34%
+    ),
+    #fff;
+}
+
+.industries-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.45;
+  background-image:
+    linear-gradient(
+      rgba(91, 11, 43, 0.055) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(91, 11, 43, 0.055) 1px,
+      transparent 1px
+    );
+  background-size: 74px 74px;
+  mask-image: linear-gradient(
+    to bottom,
+    black,
+    transparent 90%
+  );
+}
+
+.industries-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+}
+
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 17px;
+
+  border: 1px solid rgba(203, 31, 91, 0.18);
+  border-radius: 999px;
+
+  background: rgba(255, 245, 249, 0.9);
+
+  color: var(--rubium-burgundy);
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.section-badge span {
+  color: var(--rubium-pink);
+}
+
+.industries-hero h1 {
+  margin: 28px 0 20px;
+
+  font-size: clamp(48px, 7vw, 82px);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  font-weight: 850;
+
+  color: var(--rubium-dark);
+}
+
+.industries-hero h1 span {
+  background: linear-gradient(
+    100deg,
+    var(--rubium-burgundy),
+    var(--rubium-ruby),
+    var(--rubium-pink)
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.industries-hero p {
+  max-width: 680px;
+  margin: auto;
+
+  color: var(--text-secondary);
+
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+
+/* INDUSTRIES SECTION */
+
+.industries-section {
+  padding: 110px 24px;
+  background: #fff;
+}
+
+.industries-container {
+  width: min(1180px, 100%);
+  margin: auto;
+}
+
+.industries-heading {
+  max-width: 700px;
+  margin-bottom: 60px;
+}
+
+.industries-heading > span {
+  color: var(--rubium-pink);
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+}
+
+.industries-heading h2 {
+  margin: 15px 0;
+
+  font-size: clamp(36px, 5vw, 56px);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.industries-heading h2 strong {
+  color: var(--rubium-burgundy);
+}
+
+.industries-heading p {
+  max-width: 600px;
+
+  color: var(--text-secondary);
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+/* CARDS */
+
+.industries-grid-cards {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+.industry-card {
+  position: relative;
+
+  min-height: 280px;
+
+  padding: 30px;
+
+  border: 1px solid rgba(91, 11, 43, 0.10);
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #fff9fb
+    );
+
+  box-shadow:
+    0 8px 30px rgba(91, 11, 43, 0.045);
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.industry-card:hover {
+  border-color: rgba(203, 31, 91, 0.28);
+
+  box-shadow:
+    0 20px 45px rgba(91, 11, 43, 0.10);
+}
+
+.industry-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 25px;
+
+  border-radius: 15px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(91, 11, 43, 0.08),
+    rgba(203, 31, 91, 0.10)
+  );
+
+  color: var(--rubium-burgundy);
+}
+
+.industry-card h3 {
+  margin: 0 0 12px;
+
+  font-size: 20px;
+  font-weight: 750;
+
+  color: var(--rubium-dark);
+}
+
+.industry-card p {
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.industry-arrow {
+  position: absolute;
+
+  right: 27px;
+  bottom: 25px;
+
+  color: var(--rubium-pink);
+
+  font-size: 20px;
+
+  transition: transform 0.25s ease;
+}
+
+.industry-card:hover .industry-arrow {
+  transform: translate(4px, -4px);
+}
+
+
+/* CTA */
+
+.industries-cta {
+  position: relative;
+
+  padding: 110px 24px;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #4a0625,
+      #65082f,
+      #820f43
+    );
+
+  color: white;
+}
+
+.cta-glow {
+  position: absolute;
+
+  width: 450px;
+  height: 450px;
+
+  top: -250px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background: rgba(245, 92, 151, 0.22);
+
+  filter: blur(100px);
+}
+
+.industries-cta > div:last-child {
+  position: relative;
+  z-index: 2;
+}
+
+.industries-cta > div:last-child > span {
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+
+  color: #f4a0c0;
+}
+
+.industries-cta h2 {
+  margin: 18px 0;
+
+  font-size: clamp(40px, 5vw, 65px);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.industries-cta h2 strong {
+  color: #f39abd;
+}
+
+.industries-cta p {
+  margin: 0 auto 35px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 16px;
+}
+
+.industries-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 15px 24px;
+
+  border-radius: 999px;
+
+  background: #ffffff;
+  color: var(--rubium-burgundy);
+
+  font-size: 14px;
+  font-weight: 750;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.industries-cta-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.20);
+}
+
+.industries-cta-button span {
+  font-size: 18px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 950px) {
+
+  .industries-grid-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .industries-hero {
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 650px) {
+
+  .industries-hero {
+    min-height: 470px;
+    padding: 80px 20px 70px;
+  }
+
+  .industries-hero h1 {
+    font-size: 48px;
+  }
+
+  .industries-hero p {
+    font-size: 15px;
+  }
+
+  .industries-section {
+    padding: 80px 20px;
+  }
+
+  .industries-grid-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .industry-card {
+    min-height: 240px;
+  }
+
+  .industries-cta {
+    padding: 80px 20px;
+  }
+}
