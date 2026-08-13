@@ -125,6 +125,37 @@ function Footer() {
                   <span>LinkedIn</span>
                 </a>
 
+                {/* WHATSAPP */}
+  <a
+    href="https://wa.me/YOUR_NUMBER"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="footer-social-link"
+  >
+    {/* WhatsApp Icon */}
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M20 11.5C20 16.2 16.3 20 11.7 20C10.2 20 8.8 19.6 7.5 19L4 20L5.1 16.7C4.4 15.5 4 14.1 4 12.6C4 7.9 7.7 4 12.3 4C16.7 4 20 7.3 20 11.5Z"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinejoin="round"
+      />
+
+      <path
+        d="M8.5 9.5C8.7 9 9 8.8 9.4 8.8C9.7 8.8 10 9 10.2 9.4L10.8 10.5C11 10.8 11 11.1 10.8 11.4L10.3 12C10.8 13 11.7 13.9 12.7 14.4L13.3 13.9C13.6 13.7 13.9 13.7 14.2 13.9L15.3 14.5C15.7 14.7 15.8 15.1 15.6 15.4C15.3 16 14.8 16.3 14.2 16.3C11.1 16 8.5 13.4 8.2 10.3C8.2 10 8.3 9.7 8.5 9.5Z"
+        fill="currentColor"
+      />
+    </svg>
+
+    <span>WhatsApp</span>
+  </a>
+
               </div>
             </div>
 

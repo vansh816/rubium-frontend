@@ -490,3 +490,40 @@
   flex-shrink: 0 !important;
 }
 
+.footer-social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.footer-social-links a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease;
+}
+
+.footer-social-links a:hover {
+  transform: translateX(4px);
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background: #111;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.linkedin-small {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
