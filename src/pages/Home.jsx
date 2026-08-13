@@ -12,6 +12,7 @@ import Testimonials from "../sections/Testimonials";
 import GetDemo from "../pages/GetDemo";
 import FAQ from "../sections/FAQ";
 import About from "../sections/About";
+import WhatsAppButton from "../components/WhatsAppButton";
 
 import "../styles/home.css";
 
@@ -75,7 +76,8 @@ function Home() {
           <GetDemo />
         </section>
 
-
+      <WhatsAppButton />
+      
       </main>
 
       <Footer />
