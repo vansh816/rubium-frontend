@@ -19,7 +19,7 @@ const testimonials = [
   {
     quote:
       "From architecture to user experience, Rubium AI brought the right engineering mindset to the project. Communication and execution remained strong throughout.",
-    name: "Govind Shrivastav",
+    name: "Ankit Singh",
     role: "Co-Founder",
     company: "Startup",
   },
