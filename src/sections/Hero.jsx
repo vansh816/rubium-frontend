@@ -74,7 +74,7 @@ function Hero() {
         <div className="hero-visual">
 
           <img
-            src="/images/rubium-robot.jpeg"
+            src="/images/rubium-mascot.png"
             alt="Rubium AI Robot"
             className="hero-robot"
           />

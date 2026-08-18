@@ -9,7 +9,7 @@ function Navbar() {
         {/* LOGO */}
         <a href="#home" className="navbar-logo">
          <img
-          src="/images/rubium-logo.png"
+          src="/images/rubium-logoshine.png"
           alt="Rubium AI"
         />
 
