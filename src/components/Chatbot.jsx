@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { FaArrowUp, FaCopy, FaTimes } from "react-icons/fa";
 import "../styles/chatbot.css";
 
-const mascot = "/images/brand-mascot.png";
+const mascot = "/images/chatbot-icon.png";
 
 const API_URL = (
   import.meta.env.VITE_API_URL ||
@@ -370,6 +370,7 @@ function Chatbot() {
           onClick={() => setOpen(true)}
           aria-label="Open Rubium AI chatbot"
         >
+          <span className="chatbot-tooltip">Chat with us</span>
           <img
             src={mascot}
             alt="Open Rubium AI chatbot"

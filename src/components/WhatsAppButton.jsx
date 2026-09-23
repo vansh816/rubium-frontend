@@ -1,3 +1,5 @@
+import "../styles/whatsapp.css";
+
 function WhatsAppButton() {
   return (
     <a
@@ -7,6 +9,7 @@ function WhatsAppButton() {
       className="whatsapp-float"
       aria-label="Chat with Rubium AI on WhatsApp"
     >
+      <span className="whatsapp-tooltip">DM us for more</span>
       <svg
         viewBox="0 0 24 24"
         width="28"

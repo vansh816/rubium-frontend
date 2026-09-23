@@ -17,54 +17,63 @@ const industries = [
   {
     title: "FinTech & Banking",
     icon: Landmark,
+    image: "/images/industries/fintech.jpg",
     description:
       "Build secure financial platforms, intelligent analytics, automation systems, and AI-powered solutions for the modern financial ecosystem.",
   },
   {
     title: "Healthcare",
     icon: HeartPulse,
+    image: "/images/industries/healthcare.jpg",
     description:
       "Create intelligent healthcare experiences and digital systems that improve workflows, accessibility, and operational efficiency.",
   },
   {
     title: "E-Commerce & Retail",
     icon: ShoppingBag,
+    image: "/images/industries/ecommerce.jpg",
     description:
       "Transform online commerce with intelligent recommendations, automation, personalized experiences, and scalable platforms.",
   },
   {
     title: "Education & EdTech",
     icon: GraduationCap,
+    image: "/images/industries/education.jpg",
     description:
       "Develop engaging learning platforms, AI-powered education tools, and digital experiences built for modern learners.",
   },
   {
     title: "Manufacturing",
     icon: Factory,
+    image: "/images/industries/manufacturing.jpg",
     description:
       "Use automation, data, AI, and connected systems to improve production workflows and operational intelligence.",
   },
   {
     title: "Logistics & Supply Chain",
     icon: Truck,
+    image: "/images/industries/logistics.jpg",
     description:
       "Build intelligent logistics systems that improve visibility, planning, automation, and supply chain efficiency.",
   },
   {
     title: "Real Estate",
     icon: Building2,
+    image: "/images/industries/real-estate.jpg",
     description:
       "Modernize property platforms and workflows through automation, intelligent search, analytics, and digital experiences.",
   },
   {
     title: "Government & Public Sector",
     icon: GovernmentIcon,
+    image: "/images/industries/government.jpg",
     description:
       "Create secure and accessible digital platforms that help public organizations modernize services and operations.",
   },
   {
     title: "Startups & SMEs",
     icon: Rocket,
+    image: "/images/industries/startups.jpg",
     description:
       "Turn ambitious ideas into scalable digital products with rapid development, AI integration, and modern technology.",
   },
@@ -152,6 +161,19 @@ const Industries = () => {
           {/* Content */}
           <div className="industry-display">
 
+            <AnimatePresence>
+              <motion.div
+                key={active.image}
+                className="industry-display-bg"
+                style={{ backgroundImage: `url(${active.image})` }}
+                initial={{ opacity: 0, scale: 1.03 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.35, ease: "easeInOut" }}
+              />
+            </AnimatePresence>
+
+            <div className="industry-display-overlay"></div>
             <div className="industry-display-glow"></div>
 
             <AnimatePresence mode="wait">

@@ -4,46 +4,22 @@
 
 .hero {
   position: relative;
-
   min-height: calc(100vh - 78px);
-
   overflow: hidden;
-
-  background:
-    radial-gradient(
-      circle at 80% 35%,
-      rgba(213, 54, 114, 0.08),
-      transparent 28%
-    ),
-    radial-gradient(
-      circle at 10% 80%,
-      rgba(91, 11, 43, 0.05),
-      transparent 30%
-    ),
-    #ffffff;
+  background: #ffffff;
 }
-
 
 .hero-container {
   position: relative;
   z-index: 2;
-
   min-height: calc(100vh - 78px);
-
   display: grid;
-
-  grid-template-columns:
-    minmax(0, 1.05fr)
-    minmax(400px, 0.95fr);
-
+  grid-template-columns: minmax(0, 1.05fr) minmax(380px, 0.95fr);
   align-items: center;
-
-  gap: 40px;
-
-  padding-top: 50px;
-  padding-bottom: 70px;
+  gap: 32px;
+  padding-top: 36px;
+  padding-bottom: 44px;
 }
-
 
 /* =========================
    BACKGROUND
@@ -52,66 +28,79 @@
 .hero-background {
   position: absolute;
   inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
 
+/* THEME LIGHT BACKGROUND IMAGE — SIMPLE, AIRY & LIGHT */
+.hero-bg-image {
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/hero-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.85;
   pointer-events: none;
 }
 
+/* GENTLE LIGHT BLEND OVERLAY */
+.hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    transparent 35%,
+    rgba(255, 255, 255, 0.4) 80%,
+    #ffffff 100%
+  );
+  pointer-events: none;
+}
 
 .hero-background::before {
   content: "";
-
   position: absolute;
   inset: 0;
-
   background-image:
     linear-gradient(
-      rgba(91, 11, 43, 0.035) 1px,
+      rgba(91, 11, 43, 0.015) 1px,
       transparent 1px
     ),
     linear-gradient(
       90deg,
-      rgba(91, 11, 43, 0.035) 1px,
+      rgba(91, 11, 43, 0.015) 1px,
       transparent 1px
     );
-
   background-size: 70px 70px;
-
   mask-image: linear-gradient(
     to bottom,
     black,
-    transparent 90%
+    transparent 80%
   );
+  opacity: 0.4;
 }
-
 
 .hero-glow {
   position: absolute;
-
   border-radius: 50%;
-
   filter: blur(80px);
 }
 
-
 .hero-glow-one {
-  width: 300px;
-  height: 300px;
-
+  width: 320px;
+  height: 320px;
   top: 15%;
-  right: 10%;
-
-  background: rgba(213, 54, 114, 0.08);
+  right: 12%;
+  background: rgba(213, 54, 114, 0.04);
 }
 
-
 .hero-glow-two {
-  width: 240px;
-  height: 240px;
-
-  bottom: 5%;
-  left: 20%;
-
-  background: rgba(91, 11, 43, 0.06);
+  width: 260px;
+  height: 260px;
+  bottom: 8%;
+  left: 15%;
+  background: rgba(91, 11, 43, 0.02);
 }
 
 
@@ -154,18 +143,12 @@
 
 
 .hero h1 {
-  margin-top: 25px;
-
+  margin-top: 18px;
   max-width: 750px;
-
-  font-size: clamp(58px, 7vw, 94px);
-
-  line-height: 0.98;
-
-  letter-spacing: -0.065em;
-
+  font-size: clamp(54px, 6.5vw, 86px);
+  line-height: 1;
+  letter-spacing: -0.055em;
   font-weight: 800;
-
   color: var(--rubium-dark);
 }
 
@@ -188,15 +171,11 @@
 
 
 .hero-description {
-  max-width: 650px;
-
-  margin-top: 30px;
-
+  max-width: 620px;
+  margin-top: 18px;
   color: var(--text-secondary);
-
-  font-size: 17px;
-
-  line-height: 1.8;
+  font-size: 16px;
+  line-height: 1.75;
 }
 
 
@@ -206,12 +185,9 @@
 
 .hero-actions {
   display: flex;
-
   align-items: center;
-
   gap: 14px;
-
-  margin-top: 36px;
+  margin-top: 24px;
 }
 
 
@@ -224,7 +200,7 @@
 
   gap: 9px;
 
-  padding: 14px 21px;
+  padding: 13px 22px;
 
   border-radius: 999px;
 
@@ -286,28 +262,21 @@
 
 .hero-tags {
   display: flex;
-
   flex-wrap: wrap;
-
-  gap: 10px;
-
-  margin-top: 42px;
+  gap: 8px;
+  margin-top: 24px;
 }
 
 
 .hero-tags span {
-  padding: 7px 12px;
-
+  padding: 6px 12px;
   border: 1px solid var(--border);
-
   border-radius: 999px;
-
   color: var(--text-muted);
-
   font-size: 12px;
   font-weight: 600;
-
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
 }
 
 
@@ -317,13 +286,10 @@
 
 .hero-visual {
   position: relative;
-
-  min-height: 580px;
-
+  min-height: 480px;
   display: flex;
   align-items: center;
   justify-content: center;
-
   overflow: visible;
 }
 
@@ -331,21 +297,15 @@
 .hero-robot {
   position: relative;
   z-index: 10;
-
   display: block;
-
-  width: 500px;
+  width: 440px;
   max-width: 90%;
-
   height: auto;
-
   object-fit: contain;
-
   opacity: 1;
   visibility: visible;
-
   filter: drop-shadow(
-    0 25px 40px rgba(91, 11, 43, 0.15)
+    0 20px 35px rgba(91, 11, 43, 0.14)
   );
 }
 
@@ -483,7 +443,7 @@
 .brand-statement {
   position: relative;
 
-  padding: 130px 0 140px;
+  padding: 50px 0;
 
   background: #ffffff;
 
@@ -528,7 +488,7 @@
   align-items: center;
   justify-content: space-between;
 
-  padding-bottom: 25px;
+  padding-bottom: 18px;
 
   border-bottom: 1px solid var(--border);
 }
@@ -562,11 +522,11 @@
 
   grid-template-columns: 1.2fr 0.8fr;
 
-  gap: 80px;
+  gap: 50px;
 
   align-items: end;
 
-  padding-top: 65px;
+  padding-top: 28px;
 }
 
 
@@ -607,9 +567,9 @@
 
   color: var(--text-secondary);
 
-  font-size: 17px;
+  font-size: 16px;
 
-  line-height: 1.8;
+  line-height: 1.75;
 }
 
 
@@ -621,9 +581,9 @@
 
   align-items: center;
 
-  gap: 30px;
+  gap: 25px;
 
-  margin-top: 70px;
+  margin-top: 30px;
 }
 
 
@@ -702,7 +662,7 @@
 
 .what-we-build {
   position: relative;
-  padding: 130px 0;
+  padding: 50px 0;
   background: #fffafa;
   overflow: hidden;
 }
@@ -735,11 +695,11 @@
   display: grid;
   grid-template-columns: 1.25fr 0.75fr;
 
-  gap: 80px;
+  gap: 50px;
 
   align-items: end;
 
-  margin-bottom: 70px;
+  margin-bottom: 32px;
 }
 
 .what-we-build-header h2 {
@@ -917,15 +877,15 @@
 }
 
 .capability-content {
-  margin-top: 50px;
+  margin-top: 24px;
 }
 
 .capability-content h3 {
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 
   color: var(--rubium-dark);
 
-  font-size: 28px;
+  font-size: 26px;
 
   letter-spacing: -0.03em;
 }
@@ -937,7 +897,7 @@
 
   font-size: 14px;
 
-  line-height: 1.75;
+  line-height: 1.7;
 }
 
 .capability-bottom {
@@ -947,9 +907,9 @@
 
   justify-content: space-between;
 
-  gap: 20px;
+  gap: 16px;
 
-  margin-top: 35px;
+  margin-top: 20px;
 }
 
 .capability-tags {
@@ -1045,71 +1005,6 @@
 }
 
 /* =========================
-   REDUCE SECTION SPACING
-========================= */
-
-.services-section,
-.industries-section,
-.process-section,
-.technology-section,
-.case-studies-section,
-.testimonials-section {
-  padding-top: 70px;
-  padding-bottom: 70px;
-}
-
-
-/* What We Build */
-.services-section {
-  padding-top: 70px;
-  padding-bottom: 60px;
-}
-
-
-/* Industries */
-.industries-section {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
-
-/* How We Work / Process */
-.process-section {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
-
-/* Technology */
-.technology-section {
-  padding-top: 65px;
-  padding-bottom: 70px;
-}
-
-/* Reduce excessive header spacing */
-
-.services-header,
-.industries-header,
-.process-header,
-.technology-header {
-  margin-bottom: 45px;
-}
-
-
-/* Reduce excessive bottom spacing */
-
-.services-bottom {
-  margin-top: 45px;
-}
-
-
-/* Prevent large empty areas */
-section {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-/* =========================
    GLOBAL SECTION SPACING
 ========================= */
 
@@ -1119,41 +1014,59 @@ section {
   min-height: auto !important;
 }
 
-
-/* Consistent, compact section spacing */
-
+/* Consistent, compact section spacing across the whole website */
 .services-section,
 .industries-section,
 .process-section,
 .technology-section,
 .case-studies-section,
-.testimonials-section {
-  padding-top: 60px !important;
-  padding-bottom: 60px !important;
+.testimonials-section,
+.brand-statement,
+.what-we-build,
+.about-section,
+.faq-section,
+.contact-section {
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
 }
 
-
 /* Keep section headings from creating huge gaps */
-
 .services-header,
 .industries-header,
 .process-header,
 .technology-header,
 .case-studies-header,
-.testimonials-header {
+.testimonials-header,
+.about-intro,
+.team-header,
+.faq-header,
+.contact-header {
   margin-top: 0 !important;
-  margin-bottom: 40px !important;
+  margin-bottom: 32px !important;
 }
 
+/* Compact bottom CTAs */
+.services-bottom,
+.process-bottom,
+.technology-bottom,
+.case-studies-bottom,
+.testimonials-bottom,
+.faq-bottom {
+  margin-top: 30px !important;
+  padding-top: 22px !important;
+}
 
 /* Remove accidental large spacing between sections */
-
 .services-section + section,
 .industries-section + section,
 .process-section + section,
 .technology-section + section,
 .case-studies-section + section,
-.testimonials-section + section {
+.testimonials-section + section,
+.brand-statement + section,
+.about-section + section,
+.faq-section + section,
+.contact-section + section {
   margin-top: 0 !important;
 }
 

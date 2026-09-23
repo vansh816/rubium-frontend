@@ -2,9 +2,11 @@ import { ArrowUpRight, Sparkles } from "lucide-react";
 
 function Hero() {
   return (
-    <section id="home" className="hero-section">
+    <section id="home" className="hero hero-section">
 
       <div className="hero-background">
+        <div className="hero-bg-image" aria-hidden="true"></div>
+        <div className="hero-bg-overlay" aria-hidden="true"></div>
         <div className="hero-glow hero-glow-one"></div>
         <div className="hero-glow hero-glow-two"></div>
       </div>
@@ -72,6 +74,8 @@ function Hero() {
 
         {/* RIGHT */}
         <div className="hero-visual">
+
+          <div className="hero-orbit" aria-hidden="true"></div>
 
           <img
             src="/images/rubium-mascot.png"

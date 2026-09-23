@@ -1,5 +1,12 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import {
+  ArrowUpRight,
+  Compass,
+  Cpu,
+  Rocket,
+  CheckCircle2,
+  Sparkles,
+} from "lucide-react";
 import "../styles/about.css";
 
 const team = [
@@ -60,66 +67,161 @@ function About() {
           className="about-intro"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.7 }}
         >
-          <span className="about-eyebrow">
-            ABOUT RUBIUM AI
-          </span>
+          {/* Top 2-Column Hero */}
+          <div className="about-hero-grid">
+            <div className="about-hero-text">
+              <span className="about-eyebrow">
+                ABOUT RUBIUM AI
+              </span>
 
-          <h2>
-            We don't just build with AI.
-            <span> We engineer what's next.</span>
-          </h2>
+              <h2>
+                We don't just build with AI.
+                <span> We engineer what's next.</span>
+              </h2>
 
-          <div className="about-content">
+              <p className="about-lead">
+                Rubium AI is an AI engineering company focused on
+                turning complex problems into intelligent, practical,
+                and scalable solutions.
+              </p>
 
-            <p className="about-lead">
-              Rubium AI is an AI engineering company focused on
-              turning complex problems into intelligent, practical,
-              and scalable solutions.
-            </p>
+              <p className="about-sub">
+                We work at the intersection of Artificial Intelligence,
+                automation, software engineering, and product development
+                — building systems that don't just look impressive,
+                but actually solve problems.
+              </p>
 
-            <p>
-              We work at the intersection of Artificial Intelligence,
-              automation, software engineering, and product development
-              - building systems that don't just look impressive,
-              but actually solve problems.
-            </p>
-
-            <p>
-              From intelligent workflows and AI-powered applications
-              to automation systems and custom AI solutions, our
-              approach is simple:
-            </p>
-
-            <div className="about-principles">
-              <span>Understand the problem.</span>
-              <span>Engineer the intelligence.</span>
-              <span>Build what matters.</span>
+              <div className="about-badges">
+                <span className="about-badge">
+                  <CheckCircle2 size={15} />
+                  Intelligent Workflows
+                </span>
+                <span className="about-badge">
+                  <CheckCircle2 size={15} />
+                  Automation Systems
+                </span>
+                <span className="about-badge">
+                  <CheckCircle2 size={15} />
+                  Measurable Impact
+                </span>
+              </div>
             </div>
 
-            <p>
-              We believe the future won't be built by simply adding AI
-              to existing products. It will be built by rethinking how
-              products, businesses, and people work with intelligent
-              systems.
-            </p>
+            <div className="about-hero-visual">
+              <div className="about-visual-card">
+                <div className="about-visual-glow" />
 
-            <p>
-              At Rubium AI, we're experimenting, building, testing,
-              and learning every day - with one long-term goal:
-            </p>
+                <div className="about-visual-badge-top">
+                  <Sparkles size={13} />
+                  <span>Next-Gen AI Engineering</span>
+                </div>
 
-            <p className="about-goal">
-              To build intelligent technology that creates
-              measurable impact.
-            </p>
+                <img
+                  src="/images/mascot-laptop.png"
+                  alt="Rubium AI Mascot"
+                  className="about-visual-mascot"
+                />
 
+                <div className="about-visual-footer">
+                  <strong>Practical Intelligence</strong>
+                  <span>Engineered for real-world enterprise scale</span>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className="about-tagline">
-            Rubium AI - Engineering Intelligence for What's Next.
+          {/* Methodology / 3 Approach Cards */}
+          <div className="about-approach-section">
+            <div className="about-approach-header">
+              <span className="about-sub-eyebrow">OUR APPROACH</span>
+              <h3>A disciplined approach to intelligent engineering.</h3>
+            </div>
+
+            <div className="about-approach-grid">
+              <motion.div
+                className="about-approach-card"
+                whileHover={{ y: -5, transition: { duration: 0.25 } }}
+              >
+                <div className="about-approach-top">
+                  <div className="about-approach-icon">
+                    <Compass size={22} strokeWidth={1.8} />
+                  </div>
+                  <span className="about-approach-num">01</span>
+                </div>
+
+                <h4>Understand the problem.</h4>
+
+                <p>
+                  We deconstruct operational bottlenecks and workflows first to uncover exactly where intelligence will generate real, sustainable value.
+                </p>
+              </motion.div>
+
+              <motion.div
+                className="about-approach-card"
+                whileHover={{ y: -5, transition: { duration: 0.25 } }}
+              >
+                <div className="about-approach-top">
+                  <div className="about-approach-icon">
+                    <Cpu size={22} strokeWidth={1.8} />
+                  </div>
+                  <span className="about-approach-num">02</span>
+                </div>
+
+                <h4>Engineer the intelligence.</h4>
+
+                <p>
+                  Architecting custom AI models, autonomous agentic loops, and resilient software infrastructure tailored to your business challenges.
+                </p>
+              </motion.div>
+
+              <motion.div
+                className="about-approach-card"
+                whileHover={{ y: -5, transition: { duration: 0.25 } }}
+              >
+                <div className="about-approach-top">
+                  <div className="about-approach-icon">
+                    <Rocket size={22} strokeWidth={1.8} />
+                  </div>
+                  <span className="about-approach-num">03</span>
+                </div>
+
+                <h4>Build what matters.</h4>
+
+                <p>
+                  Delivering production-grade digital products that go beyond hype to improve workflows, eliminate manual overhead, and accelerate growth.
+                </p>
+              </motion.div>
+            </div>
+          </div>
+
+          {/* Vision Banner */}
+          <div className="about-vision-card">
+            <div className="about-vision-decor" />
+
+            <div className="about-vision-content">
+              <span className="about-vision-pill">
+                <Sparkles size={13} />
+                OUR LONG-TERM VISION
+              </span>
+
+              <h3>
+                "To build intelligent technology that creates measurable impact."
+              </h3>
+
+              <p>
+                We believe the future won't be built by simply adding AI to existing products. It will be built by rethinking how products, businesses, and people work with intelligent systems.
+              </p>
+
+              <div className="about-tagline-bar">
+                <span>Rubium AI</span>
+                <span className="dot">•</span>
+                <span>Engineering Intelligence for What's Next.</span>
+              </div>
+            </div>
           </div>
         </motion.div>
 

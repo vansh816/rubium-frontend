@@ -18,66 +18,77 @@ const services = [
   {
     icon: BrainCircuit,
     title: "AI Engineering",
+    image: "/images/services/ai-engineering.jpg",
     description:
       "Build intelligent AI systems and production-ready machine learning solutions designed around real business needs.",
   },
   {
     icon: Bot,
     title: "AI Agents",
+    image: "/images/services/ai-agents.jpg",
     description:
       "Develop autonomous AI agents that can reason, interact with tools, automate workflows, and assist your teams.",
   },
   {
     icon: Building2,
     title: "Enterprise Software",
+    image: "/images/services/enterprise-software.jpg",
     description:
       "Scalable and secure enterprise platforms built to streamline operations and support business growth.",
   },
   {
     icon: Layers3,
     title: "SaaS Development",
+    image: "/images/services/saas-development.jpg",
     description:
       "From MVP to production, we create scalable SaaS products with modern architecture and seamless user experiences.",
   },
   {
     icon: Smartphone,
     title: "Mobile Apps",
+    image: "/images/services/mobile-apps.jpg",
     description:
       "Design and develop modern mobile applications that deliver fast, intuitive, and reliable experiences.",
   },
   {
     icon: Code2,
     title: "Web Development",
+    image: "/images/services/web-development.jpg",
     description:
       "High-performance websites and web applications built with modern technologies and responsive design.",
   },
   {
     icon: Cloud,
     title: "Cloud Solutions",
+    image: "/images/services/cloud-solutions.jpg",
     description:
       "Cloud-native infrastructure and solutions designed for scalability, reliability, security, and performance.",
   },
   {
     icon: ServerCog,
     title: "DevOps",
+    image: "/images/services/devops.jpg",
     description:
       "Streamline development and deployment with automated CI/CD pipelines, infrastructure, monitoring, and cloud operations.",
   },
   {
     icon: Workflow,
     title: "Automation",
+    image: "/images/services/automation.jpg",
     description:
       "Automate repetitive processes and complex workflows to improve efficiency and reduce operational overhead.",
   },
   {
     icon: Palette,
     title: "UI/UX Design",
+    image: "/images/services/ui-ux-design.jpg",
     description:
       "Human-centered interfaces and digital experiences that combine usability, aesthetics, and business goals.",
   },
   {
     icon: Database,
     title: "Data Engineering",
+    image: "/images/services/data-engineering.jpg",
     description:
       "Build reliable data pipelines and architectures that turn complex data into useful business intelligence.",
   },
@@ -161,13 +172,21 @@ const Features = () => {
                 key={service.title}
                 variants={cardVariants}
                 whileHover={{
-                  y: -8,
+                  y: -6,
                   transition: { duration: 0.25 },
                 }}
               >
-                <div className="service-card-top">
+                <div className="service-card-media">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="service-card-img"
+                    loading="lazy"
+                  />
+                  <div className="service-card-media-overlay" />
+
                   <div className="service-icon">
-                    <Icon size={25} strokeWidth={1.8} />
+                    <Icon size={18} strokeWidth={1.8} />
                   </div>
 
                   <span className="service-number">
@@ -182,7 +201,7 @@ const Features = () => {
                 </div>
 
                 <div className="service-arrow">
-                  <ArrowUpRight size={20} />
+                  <ArrowUpRight size={17} />
                 </div>
               </motion.div>
             );

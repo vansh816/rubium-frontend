@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "../styles/footer.css";
 
 function Footer() {
@@ -37,7 +36,7 @@ function Footer() {
 
                 {/* INSTAGRAM */}
                 <a
-                  href="https://www.instagram.com/rubiumai/"
+                  href="https://www.instagram.com/rubium_ai/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="footer-social-link"
@@ -127,7 +126,7 @@ function Footer() {
 
                 {/* WHATSAPP */}
   <a
-    href="https://wa.me/YOUR_NUMBER"
+    href="https://wa.me/9319438417"
     target="_blank"
     rel="noopener noreferrer"
     className="footer-social-link"

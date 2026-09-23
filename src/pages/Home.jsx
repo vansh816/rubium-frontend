@@ -12,7 +12,6 @@ import Testimonials from "../sections/Testimonials";
 import GetDemo from "../pages/GetDemo";
 import FAQ from "../sections/FAQ";
 import About from "../sections/About";
-import WhatsAppButton from "../components/WhatsAppButton";
 
 import "../styles/home.css";
 
@@ -22,62 +21,38 @@ function Home() {
       <Navbar />
 
       <main>
-
         {/* HOME */}
-        <section id="home">
-          <Hero />
-        </section>
+        <Hero />
 
         {/* WHAT WE BUILD / SERVICES */}
-        <section id="services">
-          <Features />
-        </section>
+        <Features />
 
         {/* BRAND STATEMENT */}
         <BrandStatement />
 
         {/* INDUSTRIES */}
-        <section id="industries">
-          <Industries />
-        </section>
+        <Industries />
 
         {/* PROCESS */}
-        <section id="process">
-          <Process />
-        </section>
+        <Process />
 
         {/* TECHNOLOGY */}
-        <section id="technology">
-          <Technology />
-        </section>
+        <Technology />
 
         {/* CASE STUDIES */}
-        <section id="case-studies">
-          <CaseStudies />
-        </section>
+        <CaseStudies />
 
         {/* TESTIMONIALS */}
-        <section id="testimonials">
-          <Testimonials />
-        </section>
+        <Testimonials />
 
         {/* FAQ */}
-        <section id="FAQ">
-          <FAQ />
-        </section>
+        <FAQ />
 
-        {/* About */}
-        <section id="About">
-          <About />
-        </section>
+        {/* ABOUT */}
+        <About />
 
         {/* CONTACT / GET DEMO */}
-        <section id="contact">
-          <GetDemo />
-        </section>
-
-      <WhatsAppButton />
-      
+        <GetDemo />
       </main>
 
       <Footer />

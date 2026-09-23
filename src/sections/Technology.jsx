@@ -15,6 +15,7 @@ const technologyCategories = [
     id: "frontend",
     label: "Frontend",
     icon: Code2,
+    image: "/images/technology/frontend.jpg",
     description:
       "Modern interfaces engineered for speed, usability, responsiveness, and exceptional user experiences.",
     technologies: [
@@ -30,6 +31,7 @@ const technologyCategories = [
     id: "backend",
     label: "Backend",
     icon: Server,
+    image: "/images/technology/backend.jpg",
     description:
       "Reliable backend systems and APIs designed for performance, security, maintainability, and scale.",
     technologies: [
@@ -45,6 +47,7 @@ const technologyCategories = [
     id: "database",
     label: "Database",
     icon: Database,
+    image: "/images/technology/database.jpg",
     description:
       "Flexible and reliable data architectures built around the needs of modern digital products.",
     technologies: [
@@ -60,6 +63,7 @@ const technologyCategories = [
     id: "ai",
     label: "AI & ML",
     icon: BrainCircuit,
+    image: "/images/technology/ai.jpg",
     description:
       "Intelligent systems combining AI, machine learning, automation, and data to solve complex problems.",
     technologies: [
@@ -75,6 +79,7 @@ const technologyCategories = [
     id: "cloud",
     label: "Cloud & DevOps",
     icon: Cloud,
+    image: "/images/technology/cloud.jpg",
     description:
       "Cloud-ready infrastructure and deployment workflows designed for reliability, scalability, and continuous delivery.",
     technologies: [
@@ -90,6 +95,7 @@ const technologyCategories = [
     id: "tools",
     label: "Tools & APIs",
     icon: Wrench,
+    image: "/images/technology/tools.jpg",
     description:
       "Development and integration tools that help us connect systems, automate workflows, and ship efficiently.",
     technologies: [
@@ -178,12 +184,27 @@ const Technology = () => {
           {/* Left */}
           <div className="technology-intro">
 
+            <AnimatePresence>
+              <motion.div
+                key={active.image}
+                className="technology-intro-bg"
+                style={{ backgroundImage: `url(${active.image})` }}
+                initial={{ opacity: 0, scale: 1.03 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.35, ease: "easeInOut" }}
+              />
+            </AnimatePresence>
+
+            <div className="technology-intro-overlay" />
+
             <AnimatePresence mode="wait">
               <motion.div
                 key={active.id}
+                className="technology-intro-content"
                 initial={{
                   opacity: 0,
-                  x: -20,
+                  x: -16,
                 }}
                 animate={{
                   opacity: 1,
@@ -191,16 +212,16 @@ const Technology = () => {
                 }}
                 exit={{
                   opacity: 0,
-                  x: 20,
+                  x: 16,
                 }}
                 transition={{
-                  duration: 0.3,
+                  duration: 0.28,
                 }}
               >
                 <div className="technology-icon">
                   <ActiveIcon
-                    size={30}
-                    strokeWidth={1.6}
+                    size={26}
+                    strokeWidth={1.7}
                   />
                 </div>
 
@@ -218,7 +239,7 @@ const Technology = () => {
 
                 <a href="#contact">
                   Discuss your project
-                  <ArrowUpRight size={17} />
+                  <ArrowUpRight size={16} />
                 </a>
               </motion.div>
             </AnimatePresence>
@@ -234,7 +255,7 @@ const Technology = () => {
                 className="technology-cards"
                 initial={{
                   opacity: 0,
-                  y: 15,
+                  y: 12,
                 }}
                 animate={{
                   opacity: 1,
@@ -242,10 +263,10 @@ const Technology = () => {
                 }}
                 exit={{
                   opacity: 0,
-                  y: -10,
+                  y: -8,
                 }}
                 transition={{
-                  duration: 0.35,
+                  duration: 0.3,
                 }}
               >
                 {active.technologies.map(
@@ -255,29 +276,48 @@ const Technology = () => {
                       key={technology}
                       initial={{
                         opacity: 0,
-                        y: 15,
+                        y: 10,
                       }}
                       animate={{
                         opacity: 1,
                         y: 0,
                       }}
                       transition={{
-                        delay: index * 0.05,
-                        duration: 0.3,
+                        delay: index * 0.04,
+                        duration: 0.25,
+                      }}
+                      whileHover={{
+                        y: -3,
+                        transition: { duration: 0.2 },
                       }}
                     >
-                      <span className="technology-card-number">
-                        0{index + 1}
-                      </span>
-
-                      <span className="technology-card-name">
-                        {technology}
-                      </span>
-
-                      <ArrowUpRight
-                        size={17}
-                        className="technology-card-arrow"
+                      <div
+                        className="technology-card-bg"
+                        style={{ backgroundImage: `url(${active.image})` }}
                       />
+
+                      <div className="technology-card-top">
+                        <span className="technology-card-number">
+                          0{index + 1}
+                        </span>
+
+                        <span className="technology-card-tag">
+                          {active.label}
+                        </span>
+                      </div>
+
+                      <div className="technology-card-bottom">
+                        <span className="technology-card-name">
+                          {technology}
+                        </span>
+
+                        <span className="technology-card-arrow-wrap">
+                          <ArrowUpRight
+                            size={15}
+                            className="technology-card-arrow"
+                          />
+                        </span>
+                      </div>
                     </motion.div>
                   )
                 )}
