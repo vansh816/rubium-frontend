@@ -67,7 +67,7 @@ const Technology = () => {
   viewport={{ once: true, amount: 0.3 }}
   transition={{ duration: 0.6 }}
 >
-  {/* LEFT: Heading + Mascot */}
+  {/* LEFT: Heading */}
   <div className="process-header-left">
 
     <div className="process-heading-row">
@@ -83,14 +83,6 @@ const Technology = () => {
         </h2>
       </div>
 
-      {/* Mascot */}
-      <div className="process-mascot">
-        <img
-          src="/images/mascot-laptop.png"
-          alt="Rubium AI mascot working"
-        />
-      </div>
-
     </div>
 
   </div>
@@ -98,10 +90,6 @@ const Technology = () => {
 
   {/* RIGHT: Keep this exactly as it is */}
   <div className="process-header-right">
-
-    <span className="process-number">
-      03
-    </span>
 
     <p>
       A structured approach that transforms complex

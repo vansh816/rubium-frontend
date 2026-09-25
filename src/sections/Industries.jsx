@@ -193,10 +193,6 @@ const Industries = () => {
                   />
                 </div>
 
-                <span className="industry-label">
-                  0{activeIndustry + 1}
-                </span>
-
                 <h3>{active.title}</h3>
 
                 <p>{active.description}</p>

@@ -225,14 +225,6 @@ const Technology = () => {
                   />
                 </div>
 
-                <span className="technology-index">
-                  {String(
-                    technologyCategories.findIndex(
-                      (item) => item.id === active.id
-                    ) + 1
-                  ).padStart(2, "0")}
-                </span>
-
                 <h3>{active.label}</h3>
 
                 <p>{active.description}</p>
@@ -297,10 +289,6 @@ const Technology = () => {
                       />
 
                       <div className="technology-card-top">
-                        <span className="technology-card-number">
-                          0{index + 1}
-                        </span>
-
                         <span className="technology-card-tag">
                           {active.label}
                         </span>

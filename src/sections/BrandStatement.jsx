@@ -9,10 +9,6 @@ function BrandStatement() {
           <span className="section-eyebrow">
             WHAT IS RUBIUM AI?
           </span>
-
-          <span className="section-number">
-            01
-          </span>
         </div>
 
 
