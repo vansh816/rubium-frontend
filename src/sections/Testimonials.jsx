@@ -86,10 +86,6 @@ const Testimonials = () => {
                   size={25}
                   strokeWidth={1.5}
                 />
-
-                <span>
-                  0{index + 1}
-                </span>
               </div>
 
               <p className="testimonial-quote">

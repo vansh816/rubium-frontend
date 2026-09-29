@@ -126,10 +126,6 @@ const Technology = () => {
               >
                 <div className="process-step-top">
 
-                  <span className="process-step-number">
-                    {step.number}
-                  </span>
-
                   <div className="process-step-icon">
                     <Icon
                       size={23}

@@ -188,10 +188,6 @@ const Features = () => {
                   <div className="service-icon">
                     <Icon size={18} strokeWidth={1.8} />
                   </div>
-
-                  <span className="service-number">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
                 </div>
 
                 <div className="service-content">

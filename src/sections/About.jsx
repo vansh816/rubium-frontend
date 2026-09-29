@@ -93,7 +93,7 @@ function FounderCard({ member, index }) {
           <img
             src={member.image}
             alt={member.name}
-            className="founder-photo"
+            className={`founder-photo founder-photo-${member.initials.toLowerCase()}`}
             onError={() => setImgError(true)}
           />
         ) : (
@@ -104,10 +104,6 @@ function FounderCard({ member, index }) {
             </div>
           </div>
         )}
-
-        <span className="founder-number-badge">
-          {String(index + 1).padStart(2, "0")}
-        </span>
 
         <span className="founder-role-badge">
           {member.role}
@@ -234,7 +230,6 @@ function About() {
                   <div className="about-approach-icon">
                     <Compass size={22} strokeWidth={1.8} />
                   </div>
-                  <span className="about-approach-num">01</span>
                 </div>
 
                 <h4>Understand the problem.</h4>
@@ -252,7 +247,6 @@ function About() {
                   <div className="about-approach-icon">
                     <Cpu size={22} strokeWidth={1.8} />
                   </div>
-                  <span className="about-approach-num">02</span>
                 </div>
 
                 <h4>Engineer the intelligence.</h4>
@@ -270,7 +264,6 @@ function About() {
                   <div className="about-approach-icon">
                     <Rocket size={22} strokeWidth={1.8} />
                   </div>
-                  <span className="about-approach-num">03</span>
                 </div>
 
                 <h4>Build what matters.</h4>
@@ -345,7 +338,7 @@ function About() {
             <div className="team-partition-header">
               <div className="team-partition-badge">
                 <Award size={15} />
-                <span>01 • LEADERSHIP</span>
+                <span>LEADERSHIP</span>
               </div>
               <div className="team-partition-titles">
                 <h3>Founders & Co-Founders</h3>
@@ -369,7 +362,7 @@ function About() {
             <div className="team-partition-header">
               <div className="team-partition-badge">
                 <Code2 size={15} />
-                <span>02 • ENGINEERING TEAM</span>
+                <span>ENGINEERING TEAM</span>
               </div>
               <div className="team-partition-titles">
                 <h3>Developers & Engineers</h3>
@@ -397,10 +390,6 @@ function About() {
                   <div className="developer-card-top">
                     <div className="team-avatar">
                       {member.initials}
-                    </div>
-
-                    <div className="team-number">
-                      {String(index + 1).padStart(2, "0")}
                     </div>
                   </div>
 
