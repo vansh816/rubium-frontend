@@ -19,6 +19,7 @@ const services = [
     icon: BrainCircuit,
     title: "AI Engineering",
     image: "/images/services/ai-engineering.jpg",
+    alt: "AI engineering team building machine learning models and smart business solutions",
     description:
       "Build intelligent AI systems and production-ready machine learning solutions designed around real business needs.",
   },
@@ -26,6 +27,7 @@ const services = [
     icon: Bot,
     title: "AI Agents",
     image: "/images/services/ai-agents.jpg",
+    alt: "AI agents automating customer support and business tasks on a smart dashboard",
     description:
       "Develop autonomous AI agents that can reason, interact with tools, automate workflows, and assist your teams.",
   },
@@ -33,6 +35,7 @@ const services = [
     icon: Building2,
     title: "Enterprise Software",
     image: "/images/services/enterprise-software.jpg",
+    alt: "Custom enterprise software with ERP and CRM dashboard for large business operations",
     description:
       "Scalable and secure enterprise platforms built to streamline operations and support business growth.",
   },
@@ -40,6 +43,7 @@ const services = [
     icon: Layers3,
     title: "SaaS Development",
     image: "/images/services/saas-development.jpg",
+    alt: "SaaS development platform dashboard on laptop and mobile for subscription-based business",
     description:
       "From MVP to production, we create scalable SaaS products with modern architecture and seamless user experiences.",
   },
@@ -47,6 +51,7 @@ const services = [
     icon: Smartphone,
     title: "Mobile Apps",
     image: "/images/services/mobile-apps.jpg",
+    alt: "Mobile app development for iOS and Android shown on smartphone screens",
     description:
       "Design and develop modern mobile applications that deliver fast, intuitive, and reliable experiences.",
   },
@@ -54,6 +59,7 @@ const services = [
     icon: Code2,
     title: "Web Development",
     image: "/images/services/web-development.jpg",
+    alt: "Responsive web development project displayed on laptop, tablet, and mobile",
     description:
       "High-performance websites and web applications built with modern technologies and responsive design.",
   },
@@ -61,6 +67,7 @@ const services = [
     icon: Cloud,
     title: "Cloud Solutions",
     image: "/images/services/cloud-solutions.jpg",
+    alt: "Secure and scalable cloud solutions with cloud servers and data storage",
     description:
       "Cloud-native infrastructure and solutions designed for scalability, reliability, security, and performance.",
   },
@@ -68,6 +75,7 @@ const services = [
     icon: ServerCog,
     title: "DevOps",
     image: "/images/services/devops.jpg",
+    alt: "DevOps CI/CD pipeline for automated software deployment and monitoring",
     description:
       "Streamline development and deployment with automated CI/CD pipelines, infrastructure, monitoring, and cloud operations.",
   },
@@ -75,6 +83,7 @@ const services = [
     icon: Workflow,
     title: "Automation",
     image: "/images/services/automation.jpg",
+    alt: "Business process automation workflow connecting apps to save time and reduce manual work",
     description:
       "Automate repetitive processes and complex workflows to improve efficiency and reduce operational overhead.",
   },
@@ -82,6 +91,7 @@ const services = [
     icon: Palette,
     title: "UI/UX Design",
     image: "/images/services/ui-ux-design.jpg",
+    alt: "UI/UX design wireframes and user-friendly app interface mockups",
     description:
       "Human-centered interfaces and digital experiences that combine usability, aesthetics, and business goals.",
   },
@@ -89,6 +99,7 @@ const services = [
     icon: Database,
     title: "Data Engineering",
     image: "/images/services/data-engineering.jpg",
+    alt: "Data engineering pipeline for big data processing, analytics, and reporting",
     description:
       "Build reliable data pipelines and architectures that turn complex data into useful business intelligence.",
   },
@@ -141,9 +152,11 @@ const Features = () => {
           </h2>
 
           <p>
-            From intelligent AI systems to scalable enterprise platforms,
+           Rubium AI creates connected business systems with workflow automation that saves time and reduces manual work. 
+
+            {/* From intelligent AI systems to scalable enterprise platforms,
             we design and engineer digital products that solve real-world
-            business challenges.
+            business challenges. */}
           </p>
         </motion.div>
 
@@ -179,7 +192,7 @@ const Features = () => {
                 <div className="service-card-media">
                   <img
                     src={service.image}
-                    alt={service.title}
+                    alt={service.alt}
                     className="service-card-img"
                     loading="lazy"
                   />

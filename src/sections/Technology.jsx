@@ -142,9 +142,7 @@ const Technology = () => {
           </div>
 
           <p>
-            We choose technologies based on your product,
-            performance requirements, scalability goals, and
-            long-term business needs.
+            We build on a fast, secure, and scalable architecture so your software is ready to grow with you.
           </p>
         </motion.div>
 

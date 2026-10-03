@@ -44,15 +44,13 @@ const Testimonials = () => {
             </span>
 
             <h2>
-              Built together.
+              Client Reviews
               <span> Trusted by design.</span>
             </h2>
           </div>
 
           <p>
-            Great products come from strong collaboration.
-            We work closely with our clients to turn ambitious
-            ideas into meaningful digital experiences.
+            We work as your long-term technology partner, with transparent project communication at every step, so you always know where your project stands.
           </p>
         </motion.div>
 

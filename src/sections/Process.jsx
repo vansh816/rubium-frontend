@@ -78,8 +78,8 @@ const Technology = () => {
         </span>
 
         <h2>
-          From idea
-          <span> to impact.</span>
+          Our AI Software 
+          <span> Development Workflow</span>
         </h2>
       </div>
 
@@ -92,9 +92,7 @@ const Technology = () => {
   <div className="process-header-right">
 
     <p>
-      A structured approach that transforms complex
-      ideas into intelligent, scalable, and
-      production-ready digital products.
+      See how we take your idea from plan to launch with clear steps and agile project delivery
     </p>
 
   </div>

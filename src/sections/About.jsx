@@ -172,7 +172,7 @@ function About() {
                 We work at the intersection of Artificial Intelligence,
                 automation, software engineering, and product development
                 — building systems that don't just look impressive,
-                but actually solve problems.
+                but actually solve problems. From first idea to launch, we deliver intelligent automation solutions and end-to-end product development that create real business value.
               </p>
 
               <div className="about-badges">

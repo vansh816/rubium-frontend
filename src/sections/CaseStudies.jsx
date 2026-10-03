@@ -71,8 +71,8 @@ const CaseStudies = () => {
             </span>
 
             <h2>
-              Ideas engineered
-              <span> into reality.</span>
+              Software Project 
+              <span> Portfolio.</span>
             </h2>
           </div>
 

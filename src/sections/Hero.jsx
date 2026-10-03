@@ -30,9 +30,10 @@ function Hero() {
 
 
           <p className="hero-description">
-            We build intelligent software, AI-powered applications,
+            We build AI-powered software, intelligent chatbots, custom websites, enterprise platforms, and business automation solutions that help businesses grow, work smarter, and stay ahead.
+            {/* We build intelligent software, AI-powered applications,
             enterprise platforms, automation systems, and digital
-            products designed for the future.
+            products designed for the future. */}
           </p>
 
 
@@ -66,6 +67,7 @@ function Hero() {
             <span>Software</span>
             <span>Automation</span>
             <span>Cloud</span>
+            <span>Web Development</span>
 
           </div>
 
