@@ -8,7 +8,7 @@ import {
   CheckCircle2,
   Sparkles,
   Award,
-  Code2,
+  Users,
 } from "lucide-react";
 import "../styles/about.css";
 
@@ -66,6 +66,14 @@ const developers = [
     description:
       "Focused on backend engineering, APIs, databases, integrations, and the systems that power Rubium AI's products behind the scenes.",
     linkedin: "https://www.linkedin.com/in/vansh-sharma-571466382",
+  },
+  {
+    name: "Gaurav Krishna Kumar",
+    initials: "GK",
+    role: "Digital Marketing & Growth Specialist",
+    description:
+      "Manages digital marketing, paid advertising, lead generation, and content strategies to drive brand awareness and business growth.",
+    linkedin: "https://www.linkedin.com/in/gaurav-kumar-7471993b3/",
   },
 ];
 
@@ -357,16 +365,16 @@ function About() {
             </div>
           </div>
 
-          {/* PARTITION 2: DEVELOPERS / EMPLOYEES */}
+          {/* PARTITION 2: TEAM MEMBERS / EMPLOYEES */}
           <div className="team-partition developers-partition">
             <div className="team-partition-header">
               <div className="team-partition-badge">
-                <Code2 size={15} />
-                <span>ENGINEERING TEAM</span>
+                <Users size={15} />
+                <span>OUR TEAM</span>
               </div>
               <div className="team-partition-titles">
-                <h3>Developers & Engineers</h3>
-                <p>The core builders engineering, integrating, and scaling our software platforms.</p>
+                <h3>Core Team & Specialists</h3>
+                <p>The talented minds driving technology, design, operations, and growth across our platforms.</p>
               </div>
             </div>
 

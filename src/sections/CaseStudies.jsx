@@ -6,6 +6,8 @@ import {
   ShoppingCart,
   BarChart3,
   Workflow,
+  Sparkles,
+  TrendingUp,
 } from "lucide-react";
 
 const caseStudies = [
@@ -16,6 +18,9 @@ const caseStudies = [
     description:
       "An AI-powered workflow platform designed to automate repetitive business processes, connect systems, and help teams make faster decisions.",
     technologies: ["AI", "Automation", "APIs", "Cloud"],
+    metrics: "+68% Workflow Efficiency",
+    image: "/images/portfolio/portfolio-automation.jpg",
+    alt: "Intelligent Business Automation AI Platform UI",
     icon: BrainCircuit,
   },
   {
@@ -25,6 +30,9 @@ const caseStudies = [
     description:
       "A modern SaaS platform built around secure data management, intelligent workflows, role-based access, and scalable architecture.",
     technologies: ["React", "Java", "MongoDB", "Cloud"],
+    metrics: "99.9% Cloud Uptime",
+    image: "/images/portfolio/portfolio-enterprise.jpg",
+    alt: "Scalable Enterprise Cloud Infrastructure Dashboard",
     icon: Workflow,
   },
   {
@@ -34,6 +42,9 @@ const caseStudies = [
     description:
       "A data-driven commerce experience combining modern UI, intelligent product discovery, analytics, and streamlined customer journeys.",
     technologies: ["React", "AI", "Analytics", "APIs"],
+    metrics: "3.4x Conversion Growth",
+    image: "/images/portfolio/portfolio-ecommerce.jpg",
+    alt: "Next-Generation AI E-Commerce Store Platform",
     icon: ShoppingCart,
   },
   {
@@ -43,6 +54,9 @@ const caseStudies = [
     description:
       "A centralized analytics solution that transforms complex business data into meaningful insights and actionable intelligence.",
     technologies: ["Python", "Data", "AI/ML", "Dashboards"],
+    metrics: "10M+ Insights Analyzed",
+    image: "/images/portfolio/portfolio-data.jpg",
+    alt: "Intelligent Data Platform Predictive Analytics",
     icon: BarChart3,
   },
 ];
@@ -65,9 +79,10 @@ const CaseStudies = () => {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <div>
+          <div className="case-studies-header-left">
             <span className="case-studies-eyebrow">
-              FEATURED WORK
+              <Sparkles size={13} />
+              <span>FEATURED WORK</span>
             </span>
 
             <h2>
@@ -76,7 +91,7 @@ const CaseStudies = () => {
             </h2>
           </div>
 
-          <p>
+          <p className="case-studies-header-desc">
             From intelligent automation to enterprise platforms,
             we turn ambitious ideas into digital products built
             for real-world impact.
@@ -86,7 +101,7 @@ const CaseStudies = () => {
         {/* Main Case Study */}
         <div className="case-study-layout">
 
-          {/* Case navigation */}
+          {/* Left: Case navigation */}
           <motion.div
             className="case-study-list"
             initial={{ opacity: 0, x: -20 }}
@@ -96,14 +111,14 @@ const CaseStudies = () => {
           >
             {caseStudies.map((item, index) => {
               const Icon = item.icon;
+              const isActive = activeCase === index;
 
               return (
                 <button
                   key={item.id}
-                  className={`case-study-item ${
-                    activeCase === index ? "active" : ""
-                  }`}
+                  className={`case-study-item ${isActive ? "active" : ""}`}
                   onClick={() => setActiveCase(index)}
+                  type="button"
                 >
                   <span className="case-study-item-number">
                     {item.id}
@@ -122,7 +137,7 @@ const CaseStudies = () => {
                   <Icon
                     className="case-study-item-icon"
                     size={20}
-                    strokeWidth={1.7}
+                    strokeWidth={1.8}
                   />
                 </button>
               );
@@ -132,87 +147,80 @@ const CaseStudies = () => {
           {/* Display */}
           <div className="case-study-display">
 
+            {/* Middle: Attractive Project Image & Badges */}
             <div className="case-study-visual">
-              <div className="case-study-visual-grid"></div>
-
-              <div className="case-study-orb case-study-orb-one"></div>
-              <div className="case-study-orb case-study-orb-two"></div>
-
               <AnimatePresence mode="wait">
                 <motion.div
                   key={current.id}
-                  className="case-study-visual-content"
-                  initial={{
-                    opacity: 0,
-                    scale: 0.94,
-                  }}
-                  animate={{
-                    opacity: 1,
-                    scale: 1,
-                  }}
-                  exit={{
-                    opacity: 0,
-                    scale: 1.04,
-                  }}
-                  transition={{ duration: 0.4 }}
+                  className="case-study-visual-wrapper"
+                  initial={{ opacity: 0, scale: 0.96 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 1.03 }}
+                  transition={{ duration: 0.45, ease: "easeInOut" }}
                 >
-                  <div className="case-study-large-icon">
-                    <CurrentIcon
-                      size={42}
-                      strokeWidth={1.4}
-                    />
+                  <img
+                    src={current.image}
+                    alt={current.alt}
+                    className="case-study-image"
+                  />
+                  <div className="case-study-image-gradient" />
+
+                  {/* Top floating pill badge */}
+                  <div className="case-study-image-badge">
+                    <span className="badge-glow-dot" />
+                    <span>{current.category}</span>
                   </div>
 
-                  <span>RUBIUM AI</span>
-
-                  <strong>
-                    {current.id}
-                  </strong>
+                  {/* Bottom impact metric badge */}
+                  {current.metrics && (
+                    <div className="case-study-image-metric">
+                      <TrendingUp size={15} />
+                      <span>{current.metrics}</span>
+                    </div>
+                  )}
                 </motion.div>
               </AnimatePresence>
             </div>
 
-            {/* Details */}
+            {/* Right: Details */}
             <div className="case-study-details">
-
               <AnimatePresence mode="wait">
                 <motion.div
                   key={current.id}
-                  initial={{
-                    opacity: 0,
-                    y: 15,
-                  }}
-                  animate={{
-                    opacity: 1,
-                    y: 0,
-                  }}
-                  exit={{
-                    opacity: 0,
-                    y: -10,
-                  }}
-                  transition={{ duration: 0.3 }}
+                  className="case-study-details-content"
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.35, ease: "easeOut" }}
                 >
-                  <span className="case-study-category">
-                    {current.category}
-                  </span>
+                  <div className="case-study-category-row">
+                    <span className="case-study-category">
+                      {current.category}
+                    </span>
+                    <div className="case-study-mini-icon">
+                      <CurrentIcon size={16} />
+                    </div>
+                  </div>
 
                   <h3>{current.title}</h3>
 
                   <p>{current.description}</p>
 
-                  <div className="case-study-tech">
-                    {current.technologies.map((tech) => (
-                      <span key={tech}>{tech}</span>
-                    ))}
+                  <div className="case-study-tech-wrap">
+                    <span className="case-study-tech-label">Technologies:</span>
+                    <div className="case-study-tech">
+                      {current.technologies.map((tech) => (
+                        <span key={tech}>{tech}</span>
+                      ))}
+                    </div>
                   </div>
 
-                  <a href="#contact">
-                    Start a similar project
+                  <a href="#contact" className="case-study-cta-link">
+                    <span>Start a similar project</span>
                     <ArrowUpRight size={18} />
                   </a>
                 </motion.div>
               </AnimatePresence>
-
             </div>
 
           </div>
@@ -221,14 +229,15 @@ const CaseStudies = () => {
         {/* Bottom */}
         <motion.div
           className="case-studies-bottom"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
         >
-          <span>
-            HAVE AN IDEA? LET'S ENGINEER IT.
-          </span>
+          <a href="#contact" className="case-studies-bottom-link">
+            <span>HAVE AN IDEA? LET'S ENGINEER IT.</span>
+            <ArrowUpRight size={16} />
+          </a>
         </motion.div>
 
       </div>
